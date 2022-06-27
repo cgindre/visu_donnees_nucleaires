@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dg_nucl_data</class>
+ <widget class="QDialog" name="dg_nucl_data">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>897</width>
+    <height>340</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Données Nucléaires</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>erastem3/img/ptiRadioactif.png</normaloff>erastem3/img/ptiRadioactif.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1" rowspan="5">
+    <widget class="QListWidget" name="lw_nucl_data">
+     <item>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>A</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Période</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="1" rowspan="2" colspan="5">
+    <widget class="QTableWidget" name="tw_nucl_decay">
+     <column>
+      <property name="text">
+       <string>Mode</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Fils</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Probabilité [%]</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Energie [keV]</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Sections efficaces</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Raies</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Coefficients de dose</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="text">
+      <string>Imprimer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>Quitter</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="6">
+    <widget class="QTreeWidget" name="tw_nucl_data">
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="le_nucl_search"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>dg_nucl_data</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>615</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>169</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
